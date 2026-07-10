@@ -775,13 +775,13 @@ position:absolute;
 
 right:6%;
 
-top:38%;
+top:20%;
 
 transform:translateY(-50%) translateX(0);
 
-width:420px;
+width:470px;
 
-height:420px;
+height:470px;
 
 background:url("assets/earth.png") center center / cover no-repeat;
 overflow:hidden;
@@ -789,8 +789,10 @@ border-radius:50%;
 
 animation:floatEarth 8s ease-in-out infinite;
 
-filter:drop-shadow(0 0 60px rgba(0,191,255,.25));
-
+filter:
+drop-shadow(0 0 35px rgba(0,180,255,.45))
+drop-shadow(0 0 90px rgba(0,200,255,.30))
+drop-shadow(0 0 160px rgba(0,180,255,.18));
 z-index:1;
 
 pointer-events:none;
