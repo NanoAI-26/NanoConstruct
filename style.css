@@ -783,7 +783,9 @@ width:420px;
 
 height:420px;
 
-background:url("assets/earth.png") center/contain no-repeat;
+background:url("assets/earth.png") center center / cover no-repeat;
+overflow:hidden;
+border-radius:50%;
 
 animation:floatEarth 8s ease-in-out infinite;
 
