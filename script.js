@@ -246,11 +246,7 @@ console.log(
    PARTICLE SYSTEM
 ========================================== */
 
-const particleContainer = document.createElement("div");
-
-particleContainer.id = "particles";
-
-document.body.appendChild(particleContainer);
+const particleContainer = document.getElementById("particles");
 
 for(let i=0;i<80;i++){
 
