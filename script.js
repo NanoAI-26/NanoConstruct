@@ -110,25 +110,6 @@ observer.observe(el);
 });
 
 
-/* =========================================
-   Floating Earth Movement
-========================================= */
-
-const earth=document.querySelector(".earth");
-
-document.addEventListener("mousemove",(e)=>{
-
-if(!earth) return;
-
-const x=(window.innerWidth/2-e.clientX)/60;
-
-const y=(window.innerHeight/2-e.clientY)/60;
-
-earth.style.transform=
-
-`translate(${x}px,${y}px)`;
-
-});
 
 
 /* =========================================
