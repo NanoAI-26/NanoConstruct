@@ -5,9 +5,7 @@
 
 /* Mouse Glow */
 
-const glow = document.createElement("div");
-glow.className = "mouse-glow";
-document.body.appendChild(glow);
+const glow = document.querySelector(".mouse-glow");
 
 document.addEventListener("mousemove", (e) => {
     glow.style.left = e.clientX + "px";
