@@ -773,35 +773,25 @@ animation:floatTwo 15s ease-in-out infinite;
 
 position:absolute;
 
-right:8%;
+right:6%;
 
-top:18%;
+top:50%;
 
-width:320px;
+transform:translateY(-50%) translateX(0);
 
-height:320px;
+width:420px;
 
-border-radius:50%;
+height:420px;
 
-background:
-radial-gradient(circle at 35% 30%,
-#5DE2FF,
-#0B4D80 45%,
-#04111D 75%);
+background:url("assets/earth.png") center/contain no-repeat;
 
-box-shadow:
+animation:floatEarth 8s ease-in-out infinite;
 
-0 0 80px rgba(0,200,255,.45),
+filter:drop-shadow(0 0 60px rgba(0,191,255,.25));
 
-0 0 150px rgba(0,200,255,.18);
+z-index:1;
 
-animation:
-
-rotateEarth 25s linear infinite,
-
-floatEarth 8s ease-in-out infinite;
-
-opacity:.9;
+pointer-events:none;
 
 }
 
