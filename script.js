@@ -2,7 +2,7 @@
    NANOCONSTRUCT AI
    PREMIUM WEBSITE INTERACTIONS
 ========================================= */
-alert("NEW SCRIPT RUNNING");
+
 /* =========================================
    MOUSE GLOW
 ========================================= */
