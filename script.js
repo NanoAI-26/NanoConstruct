@@ -503,24 +503,21 @@ console.log(
 "color:#00E5FF;font-size:18px;font-weight:bold"
 
 );
-/* ===========================
-   Navbar Scroll Effect
-=========================== */
+/* ==========================================
+   NAVBAR SHRINK
+========================================== */
 
 const nav = document.querySelector("nav");
 
-window.addEventListener("scroll", () => {
+if (nav) {
 
-    if (window.scrollY > 60) {
+    window.addEventListener("scroll", () => {
 
-        nav.classList.add("nav-scrolled");
+        nav.classList.toggle("nav-scrolled", window.scrollY > 60);
 
-    } else {
+    });
 
-        nav.classList.remove("nav-scrolled");
-
-    }
-   /* ==========================================
+}/* ==========================================
    CARD CURSOR GLOW
 ========================================== */
 
@@ -528,22 +525,23 @@ const glowCards = document.querySelectorAll(
 ".feature-card,.timeline-card,.tech-card,.vision-card,.glass-card"
 );
 
-glowCards.forEach(card=>{
+glowCards.forEach(card => {
 
-    card.addEventListener("mousemove",(e)=>{
+    card.addEventListener("mousemove", (e) => {
 
-        const rect=card.getBoundingClientRect();
+        const rect = card.getBoundingClientRect();
 
-        const x=e.clientX-rect.left;
+        card.style.setProperty(
+            "--mouse-x",
+            `${e.clientX - rect.left}px`
+        );
 
-        const y=e.clientY-rect.top;
-
-        card.style.setProperty("--mouse-x",`${x}px`);
-        card.style.setProperty("--mouse-y",`${y}px`);
+        card.style.setProperty(
+            "--mouse-y",
+            `${e.clientY - rect.top}px`
+        );
 
     });
-
-});
 
 });
 
