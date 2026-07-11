@@ -129,11 +129,20 @@ list-style:none;
 }
 .footer-logo img{
 
-    width:50px;
+width:80px;
 
-    height:50px;
+height:80px;
 
-    object-fit:contain;
+border-radius:50%;
+
+object-fit:cover;
+
+display:block;
+
+box-shadow:
+0 0 25px rgba(0,200,255,.25);
+
+}
 
 }
 /* ========================================= */
