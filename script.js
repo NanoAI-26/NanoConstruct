@@ -74,7 +74,7 @@ entries.forEach(entry=>{
 if(entry.isIntersecting){
 
 entry.target.style.opacity="1";
-entry.target.style.transform="translateY(0px)";
+entry.target.style.removeProperty("transform");
 
 }
 
