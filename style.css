@@ -701,30 +701,29 @@ background:linear-gradient(90deg,#00C8FF,#5DE2FF,#ffffff);
 
 display:block;
 
+white-space:nowrap;
+
 }
 
 .hero-gradient .by{
 
-display:inline-block;
+display:inline;
 
-margin:0 18px;
-
-font-size:.58em;
+font-size:.55em;
 
 font-weight:500;
 
-letter-spacing:2px;
+color:#AEEBFF;
 
-opacity:.75;
+-webkit-text-fill-color:#AEEBFF;
+
+letter-spacing:1px;
+
+margin:0 10px;
 
 vertical-align:middle;
 
-color:#8FDFFF;
-
--webkit-text-fill-color:#8FDFFF;
-
 }
-
 .hero-description{
 
 max-width:760px;
