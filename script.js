@@ -118,74 +118,69 @@ el.style.transitionDelay=`${index*0.05}s`;
     observer.observe(el);
 
 });
+/* ==========================================
+   UNIVERSAL COUNTERS
+========================================== */
 
+const counters = [
+    { element: document.getElementById("speedCounter"), target: 10, suffix: "×" },
 
+    { element: document.querySelector(".stat-box:nth-child(1) h2"), target: 50, suffix: "%" },
 
-/* =========================================
-   Animated Counter
-========================================= */
+    { element: document.querySelector(".stat-box:nth-child(2) h2"), target: 70, suffix: "%" },
 
-const counters=document.querySelectorAll(".stat-box h2");
+    { element: document.querySelector(".stat-box:nth-child(3) h2"), target: 40, suffix: "%" },
 
-const counterObserver=new IntersectionObserver(
+    { element: document.querySelector(".stat-box:nth-child(4) h2"), target: 95, suffix: "%" }
+];
 
-(entries)=>{
+counters.forEach(counter => {
 
-entries.forEach(entry=>{
+    if (!counter.element) return;
 
-if(entry.isIntersecting){
+    counter.element.textContent = "0" + counter.suffix;
 
-const counter=entry.target;
+    let started = false;
 
-const target=parseInt(counter.innerText);
+    const observer = new IntersectionObserver((entries) => {
 
-let count=0;
+        entries.forEach(entry => {
 
-const speed=Math.max(10, target/80);
+            if (!entry.isIntersecting || started) return;
 
-const update=()=>{
+            started = true;
 
-count+=speed;
+            let value = 0;
 
-if(count<target){
+            const speed = 1200 / counter.target;
 
-counter.innerText=Math.floor(count)+"%";
+            const timer = setInterval(() => {
 
-requestAnimationFrame(update);
+                value++;
 
-}
+                counter.element.textContent = value + counter.suffix;
 
-else{
+                if (value >= counter.target) {
 
-counter.innerText=target+"%";
+                    clearInterval(timer);
 
-}
+                    counter.element.textContent =
+                    counter.target + counter.suffix;
 
-}
+                }
 
-update();
+            }, speed);
 
-counterObserver.unobserve(counter);
+        });
 
-}
+    }, { threshold: 0.5 });
 
-});
-
-},
-
-{
-
-threshold:.5
-
-}
-
-);
-
-counters.forEach(counter=>{
-
-counterObserver.observe(counter);
+    observer.observe(counter.element);
 
 });
+
+
+
 
 
 /* =========================================
@@ -560,50 +555,3 @@ glowCards.forEach(card=>{
 });
 
 });
-/* ==========================================
-   HERO STATS COUNTER
-========================================== */
-
-const speedCounter = document.getElementById("speedCounter");
-
-let speedAnimated = false;
-
-const speedObserver = new IntersectionObserver((entries) => {
-
-    entries.forEach(entry => {
-
-        if (entry.isIntersecting && !speedAnimated) {
-
-            speedAnimated = true;
-
-            let count = 0;
-
-            const interval = setInterval(() => {
-
-                count++;
-
-                speedCounter.innerText = count + "×";
-
-                if (count >= 10) {
-
-                    clearInterval(interval);
-
-                }
-
-            }, 100);
-
-        }
-
-    });
-
-}, {
-
-    threshold: 0.6
-
-});
-
-if(speedCounter){
-
-    speedObserver.observe(speedCounter);
-
-}
