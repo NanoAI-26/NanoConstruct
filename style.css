@@ -295,13 +295,9 @@ justify-content:center;
 padding:16px 36px;
 
 background:linear-gradient(
-
 135deg,
-
 #00C8FF,
-
 #5DE2FF
-
 );
 
 color:#081423;
@@ -310,12 +306,16 @@ font-weight:700;
 
 border-radius:999px;
 
-box-shadow:
+position:relative;
 
+overflow:hidden;
+
+box-shadow:
 0 0 30px rgba(0,200,255,.4);
 
 transition:.35s;
 
+}
 }
 
 .primary-button:hover{
@@ -335,6 +335,10 @@ box-shadow:
 
 display:inline-flex;
 
+align-items:center;
+
+justify-content:center;
+
 padding:16px 36px;
 
 border-radius:999px;
@@ -346,6 +350,10 @@ background:rgba(255,255,255,.03);
 backdrop-filter:blur(15px);
 
 color:white;
+
+position:relative;
+
+overflow:hidden;
 
 transition:.35s;
 
@@ -1991,6 +1999,23 @@ nav.nav-scrolled{
 .glass-card:hover::before{
 
     opacity:1;
+
+}
+/* ==========================================
+   RIPPLE ANIMATION
+========================================== */
+
+@keyframes ripple {
+
+    from {
+        transform: scale(0);
+        opacity: .6;
+    }
+
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
 
 }
 
