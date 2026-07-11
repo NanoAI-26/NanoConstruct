@@ -438,7 +438,9 @@ loader.remove();
 },1200);
 
 });
-
+const testButtons = document.querySelectorAll(".primary-button, .secondary-button");
+console.log(testButtons);
+console.log("Found buttons:", testButtons.length);
 /* ==========================================
    BUTTON RIPPLE EFFECT
 ========================================== */
