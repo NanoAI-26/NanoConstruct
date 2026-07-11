@@ -539,3 +539,5 @@ glowCards.forEach(card=>{
 });
 
 });
+
+console.log("SCRIPT LOADED");
