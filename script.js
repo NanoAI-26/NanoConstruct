@@ -441,70 +441,7 @@ loader.remove();
 const testButtons = document.querySelectorAll(".primary-button, .secondary-button");
 console.log(testButtons);
 console.log("Found buttons:", testButtons.length);
-/* ==========================================
-   BUTTON RIPPLE EFFECT
-========================================== */
 
-document.querySelectorAll(".primary-button, .secondary-button").forEach(button=>{
-
-button.addEventListener("click",(e)=>{
-console.log("BUTTON CLICKED");
-const circle=document.createElement("span");
-
-const size=Math.max(
-
-button.clientWidth,
-
-button.clientHeight
-
-);
-
-circle.style.width=size+"px";
-
-circle.style.height=size+"px";
-
-circle.style.position="absolute";
-
-circle.style.borderRadius="50%";
-
-circle.style.background="rgba(255,255,255,.4)";
-
-circle.style.transform="scale(0)";
-
-circle.style.left=
-
-e.offsetX-size/2+"px";
-
-circle.style.top=
-
-e.offsetY-size/2+"px";
-
-circle.style.animation="ripple .7s linear";
-
-button.appendChild(circle);
-
-setTimeout(()=>{
-
-circle.remove();
-
-},700);
-
-});
-
-});
-
-
-/* ==========================================
-   END
-========================================== */
-
-console.log(
-
-"%cWebsite Fully Loaded",
-
-"color:#00E5FF;font-size:18px;font-weight:bold"
-
-);
 /* ==========================================
    NAVBAR SHRINK
 ========================================== */
