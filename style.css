@@ -1894,4 +1894,65 @@ nav.nav-scrolled{
     0 0 30px rgba(0,200,255,.08);
 
 }
+/* ==========================================
+   CARD CURSOR GLOW
+========================================== */
+
+.feature-card,
+.timeline-card,
+.tech-card,
+.vision-card,
+.glass-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.feature-card::before,
+.timeline-card::before,
+.tech-card::before,
+.vision-card::before,
+.glass-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    border-radius:50%;
+
+    background:radial-gradient(
+        circle,
+        rgba(0,200,255,.18),
+        transparent 70%
+    );
+
+    left:var(--mouse-x,-999px);
+
+    top:var(--mouse-y,-999px);
+
+    transform:translate(-50%,-50%);
+
+    opacity:0;
+
+    transition:opacity .25s ease;
+
+    pointer-events:none;
+
+}
+
+.feature-card:hover::before,
+.timeline-card:hover::before,
+.tech-card:hover::before,
+.vision-card:hover::before,
+.glass-card:hover::before{
+
+    opacity:1;
+
+}
 
