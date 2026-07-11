@@ -446,7 +446,7 @@ loader.remove();
 document.querySelectorAll("button").forEach(button=>{
 
 button.addEventListener("click",(e)=>{
-
+console.log("BUTTON CLICKED");
 const circle=document.createElement("span");
 
 const size=Math.max(
