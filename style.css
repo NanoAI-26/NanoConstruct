@@ -316,7 +316,7 @@ box-shadow:
 transition:.35s;
 
 }
-}
+
 
 .primary-button:hover{
 
@@ -1999,23 +1999,6 @@ nav.nav-scrolled{
 .glass-card:hover::before{
 
     opacity:1;
-
-}
-/* ==========================================
-   RIPPLE ANIMATION
-========================================== */
-
-@keyframes ripple {
-
-    from {
-        transform: scale(0);
-        opacity: .6;
-    }
-
-    to {
-        transform: scale(4);
-        opacity: 0;
-    }
 
 }
 
