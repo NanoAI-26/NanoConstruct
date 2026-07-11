@@ -73,8 +73,15 @@ entries.forEach(entry=>{
 
 if(entry.isIntersecting){
 
-entry.target.style.opacity="1";
-entry.target.style.removeProperty("transform");
+    entry.target.style.opacity="1";
+
+    entry.target.style.removeProperty("transform");
+
+    setTimeout(()=>{
+
+        entry.target.style.transitionDelay="0s";
+
+    },800);
 
 }
 
@@ -103,9 +110,10 @@ elements.forEach((el,index)=>{
 
     el.style.transform="translateY(40px)";
 
-    el.style.transition=
-    `opacity .8s ease ${index*0.08}s,
-     transform .8s ease ${index*0.08}s`;
+   el.style.transition=
+"opacity .8s ease, transform .8s ease";
+
+el.style.transitionDelay=`${index*0.05}s`;
 
     observer.observe(el);
 
