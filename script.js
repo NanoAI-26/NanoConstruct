@@ -177,9 +177,9 @@ animatedCounters.forEach(counter => {
 /* =========================================
    Hero Button Hover Glow
 ========================================= */
-
-const buttons=document.querySelectorAll("button");
-
+const buttons = document.querySelectorAll(
+".primary-button, .secondary-button"
+);
 buttons.forEach(btn=>{
 
 btn.addEventListener("mouseenter",()=>{
@@ -443,7 +443,7 @@ loader.remove();
    BUTTON RIPPLE EFFECT
 ========================================== */
 
-document.querySelectorAll("button").forEach(button=>{
+document.querySelectorAll(".primary-button, .secondary-button").forEach(button=>{
 
 button.addEventListener("click",(e)=>{
 console.log("BUTTON CLICKED");
