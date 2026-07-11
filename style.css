@@ -2165,9 +2165,50 @@ font-size:1.35rem;
 p{
 
 font-size:.98rem;
+    
+
+}
+/* Technology Cards */
+
+.tech-grid{
+
+display:grid;
+
+grid-template-columns:1fr;
+
+gap:24px;
 
 }
 
+.tech-card{
+
+width:100%;
+
+padding:28px;
+
+text-align:center;
+
+border-radius:22px;
+
+background:rgba(255,255,255,.04);
+
+border:1px solid rgba(255,255,255,.08);
+
+box-sizing:border-box;
+
+}
+
+.tech-card i{
+
+font-size:40px;
+
+margin-bottom:18px;
+
+display:block;
+
+color:#00C8FF;
+
+}
 }
 
 
