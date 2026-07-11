@@ -307,53 +307,6 @@ hero.style.backgroundPositionY=scroll*0.4+"px";
 
 });
 
-/* ==========================================
-   FLOATING CARDS
-========================================== */
-
-const cards=document.querySelectorAll(
-
-".feature-card,.timeline-card,.tech-card,.vision-card"
-
-);
-
-cards.forEach((card,index)=>{
-
-card.animate(
-
-[
-
-{
-
-transform:"translateY(0px)"
-
-},
-
-{
-
-transform:"translateY(-12px)"
-
-},
-
-{
-
-transform:"translateY(0px)"
-
-}
-
-],
-
-{
-
-duration:5000+(index*350),
-
-iterations:Infinity
-
-}
-
-);
-
-});
 
 /* ==========================================
    NAV LINK ACTIVE
@@ -543,25 +496,6 @@ circle.remove();
 
 });
 
-/* ==========================================
-   RANDOM GLOW
-========================================== */
-
-setInterval(()=>{
-
-document.querySelectorAll(
-
-".feature-card,.tech-card,.vision-card"
-
-).forEach(card=>{
-
-card.style.boxShadow=
-
-`0 0 ${15+Math.random()*35}px rgba(0,200,255,.18)`;
-
-});
-
-},3000);
 
 /* ==========================================
    END
