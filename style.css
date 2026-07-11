@@ -1955,4 +1955,53 @@ nav.nav-scrolled{
     opacity:1;
 
 }
+/* ==========================================
+   FOOTER TAGS
+========================================== */
 
+.footer-tags{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin:28px 0 22px;
+
+}
+
+.footer-tags span{
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:#B7C8D9;
+
+    font-size:.9rem;
+
+    backdrop-filter:blur(14px);
+
+    transition:.35s ease;
+
+}
+
+.footer-tags span:hover{
+
+    transform:translateY(-4px);
+
+    border-color:#39D5FF;
+
+    color:#ffffff;
+
+    box-shadow:
+    0 0 25px rgba(0,200,255,.18);
+
+}
