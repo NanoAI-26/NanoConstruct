@@ -442,10 +442,27 @@ border-radius:18px;
 
 z-index:999;
 
-transition:.4s;
+transition:
+padding .35s ease,
+background .35s ease,
+backdrop-filter .35s ease,
+box-shadow .35s ease,
+transform .35s ease;
 
 }
+.nav-scrolled{
 
+padding:12px 34px;
+
+background:rgba(8,18,35,.82);
+
+backdrop-filter:blur(28px);
+
+box-shadow:
+0 10px 35px rgba(0,0,0,.30),
+0 0 30px rgba(0,200,255,.12);
+
+}
 .logo{
 
 display:flex;
@@ -505,7 +522,23 @@ object-fit:cover;
 display:block;
 
 }
+/* ==========================================
+   SHRINKING NAVBAR LOGO
+========================================== */
 
+.nav-scrolled .logo{
+
+    font-size:1.08rem;
+
+}
+
+.nav-scrolled .logo-circle{
+
+    width:50px;
+
+    height:50px;
+
+}
 nav ul{
 
 display:flex;
