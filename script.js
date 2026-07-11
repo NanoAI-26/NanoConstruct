@@ -122,50 +122,36 @@ el.style.transitionDelay=`${index*0.05}s`;
    UNIVERSAL COUNTERS
 ========================================== */
 
-const counters = [
-    { element: document.getElementById("speedCounter"), target: 10, suffix: "×" },
+const animatedCounters = document.querySelectorAll("[data-target]");
 
-    { element: document.querySelector(".stat-box:nth-child(1) h2"), target: 50, suffix: "%" },
-
-    { element: document.querySelector(".stat-box:nth-child(2) h2"), target: 70, suffix: "%" },
-
-    { element: document.querySelector(".stat-box:nth-child(3) h2"), target: 40, suffix: "%" },
-
-    { element: document.querySelector(".stat-box:nth-child(4) h2"), target: 95, suffix: "%" }
-];
-
-counters.forEach(counter => {
-
-    if (!counter.element) return;
-
-    counter.element.textContent = "0" + counter.suffix;
-
-    let started = false;
+animatedCounters.forEach(counter => {
 
     const observer = new IntersectionObserver((entries) => {
 
         entries.forEach(entry => {
 
-            if (!entry.isIntersecting || started) return;
+            if (!entry.isIntersecting) return;
 
-            started = true;
+            observer.unobserve(counter);
 
-            let value = 0;
+            const target = parseInt(counter.dataset.target);
+            const suffix = counter.dataset.suffix || "";
 
-            const speed = 1200 / counter.target;
+            let current = 0;
+
+            const speed = 1200 / target;
 
             const timer = setInterval(() => {
 
-                value++;
+                current++;
 
-                counter.element.textContent = value + counter.suffix;
+                counter.textContent = current + suffix;
 
-                if (value >= counter.target) {
+                if (current >= target) {
 
                     clearInterval(timer);
 
-                    counter.element.textContent =
-                    counter.target + counter.suffix;
+                    counter.textContent = target + suffix;
 
                 }
 
@@ -175,11 +161,9 @@ counters.forEach(counter => {
 
     }, { threshold: 0.5 });
 
-    observer.observe(counter.element);
+    observer.observe(counter);
 
 });
-
-
 
 
 
