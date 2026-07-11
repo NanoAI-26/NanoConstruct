@@ -1841,7 +1841,21 @@ overflow-x:hidden;
 
 }
 
-/* Hide Navbar */
+*{
+
+box-sizing:border-box;
+max-width:100%;
+
+}
+
+img{
+
+max-width:100%;
+height:auto;
+
+}
+
+/* ---------- NAVBAR ---------- */
 
 nav{
 
@@ -1849,7 +1863,7 @@ display:none;
 
 }
 
-/* Sections */
+/* ---------- SECTIONS ---------- */
 
 section{
 
@@ -1857,7 +1871,7 @@ padding:80px 24px;
 
 }
 
-/* Hero */
+/* ---------- HERO ---------- */
 
 .hero{
 
@@ -1881,9 +1895,7 @@ overflow:hidden;
 
 width:100%;
 max-width:100%;
-
 margin:auto;
-
 z-index:5;
 
 }
@@ -1891,20 +1903,16 @@ z-index:5;
 .mini-title{
 
 font-size:.75rem;
-
 letter-spacing:3px;
-
-margin-bottom:20px;
+margin-bottom:18px;
 
 }
 
 .hero h1{
 
-font-size:3.2rem;
-
+font-size:2.9rem;
 line-height:1.05;
-
-margin-bottom:24px;
+margin-bottom:22px;
 
 }
 
@@ -1916,8 +1924,7 @@ white-space:normal;
 
 .hero-gradient .by{
 
-font-size:.55em;
-
+font-size:.6em;
 margin:0 6px;
 
 }
@@ -1925,47 +1932,39 @@ margin:0 6px;
 .hero-description{
 
 font-size:1rem;
-
 line-height:1.7;
-
-max-width:100%;
-
 margin:0 auto 35px;
+max-width:100%;
 
 }
 
-/* Earth */
+/* ---------- EARTH ---------- */
 
 .earth{
 
 position:relative;
 
 top:auto;
-
-right:auto;
-
 left:auto;
+right:auto;
 
 transform:none;
 
 width:260px;
-
 height:260px;
 
 margin:25px auto;
 
 }
 
-/* Background */
+/* ---------- BACKGROUND ---------- */
 
 .gradient-one{
 
 width:420px;
-
 height:420px;
 
 left:-180px;
-
 top:-120px;
 
 }
@@ -1973,11 +1972,9 @@ top:-120px;
 .gradient-two{
 
 width:380px;
-
 height:380px;
 
 right:-180px;
-
 bottom:-140px;
 
 }
@@ -1988,12 +1985,12 @@ display:none;
 
 }
 
-/* Buttons */
+/* ---------- BUTTONS ---------- */
 
 .hero-buttons{
 
+display:flex;
 flex-direction:column;
-
 align-items:center;
 
 gap:16px;
@@ -2012,9 +2009,11 @@ justify-content:center;
 
 }
 
-/* Hero Stats */
+/* ---------- HERO STATS ---------- */
 
 .hero-stats{
+
+display:grid;
 
 grid-template-columns:1fr;
 
@@ -2028,9 +2027,31 @@ padding:28px;
 
 }
 
-/* Story */
+/* ---------- SECTION HEADERS ---------- */
+
+.section-header{
+
+padding:0 12px;
+
+}
+
+.section-header h2{
+
+font-size:2.35rem;
+
+line-height:1.15;
+
+word-break:normal;
+
+overflow-wrap:break-word;
+
+}
+
+/* ---------- STORY ---------- */
 
 .story-grid{
+
+display:grid;
 
 grid-template-columns:1fr;
 
@@ -2038,9 +2059,11 @@ gap:25px;
 
 }
 
-/* Timeline */
+/* ---------- TIMELINE ---------- */
 
 .timeline{
+
+display:grid;
 
 grid-template-columns:1fr;
 
@@ -2054,47 +2077,75 @@ display:none;
 
 }
 
-/* Features */
+/* ---------- FEATURES ---------- */
 
 .feature-grid{
 
+display:grid;
+
 grid-template-columns:1fr;
 
 gap:25px;
 
 }
 
-/* Technology */
+/* ---------- TECHNOLOGY ---------- */
 
 .tech-grid{
 
+display:grid;
+
 grid-template-columns:1fr;
 
-gap:25px;
+gap:28px;
 
 }
 
-/* Vision */
+.tech-card{
+
+width:100%;
+
+padding:30px;
+
+text-align:center;
+
+}
+
+.tech-card i{
+
+display:block;
+
+font-size:40px;
+
+margin-bottom:18px;
+
+}
+
+/* ---------- VISION ---------- */
 
 .vision-grid{
 
+display:grid;
+
 grid-template-columns:1fr;
 
 gap:25px;
 
 }
 
-/* Stats */
+/* ---------- STATS ---------- */
 
 .stats{
 
+display:grid;
+
 grid-template-columns:1fr;
 
 gap:25px;
 
 }
 
-/* Waitlist */
+/* ---------- WAITLIST ---------- */
 
 .waitlist-card{
 
@@ -2104,37 +2155,7 @@ padding:35px 22px;
 
 .waitlist form{
 
-flex-direction:column;
-
-}
-
-.waitlist input{
-
-width:100%;
-
-min-width:0;
-
-}
-
-.waitlist button{
-
-width:100%;
-
-}
-
-/* Contact */
-
-.socials{
-
-gap:18px;
-
-flex-wrap:wrap;
-
-}
-
-/* Footer */
-
-.footer-logo{
+display:flex;
 
 flex-direction:column;
 
@@ -2142,19 +2163,44 @@ gap:16px;
 
 }
 
-/* Typography */
+.waitlist input,
+.waitlist button{
 
-h1{
+width:100%;
 
-font-size:3.2rem;
+}
+
+/* ---------- CONTACT ---------- */
+
+.socials{
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:18px;
 
 }
 
-h2{
+/* ---------- FOOTER ---------- */
 
-font-size:2.1rem;
+.footer-logo{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+gap:16px;
+
+text-align:center;
 
 }
+
+/* ---------- TYPOGRAPHY ---------- */
 
 h3{
 
@@ -2165,50 +2211,9 @@ font-size:1.35rem;
 p{
 
 font-size:.98rem;
-    
-
-}
-/* Technology Cards */
-
-.tech-grid{
-
-display:grid;
-
-grid-template-columns:1fr;
-
-gap:24px;
+line-height:1.8;
 
 }
 
-.tech-card{
-
-width:100%;
-
-padding:28px;
-
-text-align:center;
-
-border-radius:22px;
-
-background:rgba(255,255,255,.04);
-
-border:1px solid rgba(255,255,255,.08);
-
-box-sizing:border-box;
-
 }
-
-.tech-card i{
-
-font-size:40px;
-
-margin-bottom:18px;
-
-display:block;
-
-color:#00C8FF;
-
-}
-}
-
 
