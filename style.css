@@ -1827,94 +1827,98 @@ color:#8899aa;
 /* ========================================= */
 /* RESPONSIVE */
 /* ========================================= */
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
 
-@media(max-width:1200px){
+@media (max-width:768px){
 
-.feature-grid{
+html,
+body{
 
-grid-template-columns:repeat(2,1fr);
-
-}
-
-.tech-grid{
-
-grid-template-columns:repeat(2,1fr);
-
-}
-
-.timeline{
-
-grid-template-columns:repeat(2,1fr);
+width:100%;
+overflow-x:hidden;
 
 }
 
-.stats{
-
-grid-template-columns:repeat(2,1fr);
-
-}
-
-.vision-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.story-grid{
-
-grid-template-columns:1fr;
-
-}
-
-}
-
-@media(max-width:900px){
+/* Hide Navbar */
 
 nav{
-
-padding:18px;
-
-}
-
-nav ul{
 
 display:none;
 
 }
 
+/* Sections */
+
+section{
+
+padding:80px 24px;
+
+}
+
+/* Hero */
+
 .hero{
 
-padding-top:170px;
+min-height:auto;
+
+padding:60px 24px 80px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+overflow:hidden;
 
 }
 
-.hero-stats{
+.hero-content{
 
-grid-template-columns:1fr;
+width:100%;
+max-width:100%;
 
-}
+margin:auto;
 
-.feature-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.tech-grid{
-
-grid-template-columns:1fr;
+z-index:5;
 
 }
 
-.timeline{
+.mini-title{
 
-grid-template-columns:1fr;
+font-size:.75rem;
+
+letter-spacing:3px;
+
+margin-bottom:20px;
 
 }
 
-.stats{
+.hero h1{
 
-grid-template-columns:1fr;
+font-size:3.2rem;
+
+line-height:1.05;
+
+margin-bottom:24px;
+
+}
+
+.hero-gradient{
+
+white-space:normal;
+
+}
+
+.hero-gradient .by{
+
+font-size:.55em;
+
+margin:0 6px;
 
 }
 
@@ -1922,1070 +1926,248 @@ grid-template-columns:1fr;
 
 font-size:1rem;
 
-}
+line-height:1.7;
 
-.waitlist-card{
+max-width:100%;
 
-padding:45px 25px;
-
-}
+margin:0 auto 35px;
 
 }
 
-@media(max-width:600px){
+/* Earth */
 
-section{
-
-padding:90px 7%;
-
-}
-
-h1{
-
-font-size:3rem;
-
-}
-
-.section-header h2{
-
-font-size:2.2rem;
-
-}
-
-.logo span{
-
-display:none;
-
-}
-
-.nav-button{
-
-display:none;
-
-}
-
-}
-
-/* ========================================= */
-/* ANIMATIONS */
-/* ========================================= */
-
-@keyframes pulseGlow{
-
-0%,100%{
-
-opacity:.5;
-
-transform:scale(1);
-
-}
-
-50%{
-
-opacity:1;
-
-transform:scale(1.1);
-
-}
-
-}
-
-
-}
-
-.feature-card h3{
-
-margin-bottom:18px;
-
-}
-
-/* ========================================= */
-/* TECHNOLOGY */
-/* ========================================= */
-
-.tech-grid{
-
-display:grid;
-
-grid-template-columns:repeat(4,1fr);
-
-gap:40px;
-
-margin-top:60px;
-
-}
-
-.tech-card{
-
-text-align:center;
-
-padding:45px 30px;
-
-background:rgba(255,255,255,.04);
-
-border:1px solid rgba(255,255,255,.08);
-
-border-radius:24px;
-
-backdrop-filter:blur(18px);
-
-transition:.45s;
+.earth{
 
 position:relative;
 
-overflow:hidden;
+top:auto;
+
+right:auto;
+
+left:auto;
+
+transform:none;
+
+width:260px;
+
+height:260px;
+
+margin:25px auto;
 
 }
 
-.tech-card:hover{
+/* Background */
 
-    transform:translateY(-8px);
+.gradient-one{
 
-    background:rgba(255,255,255,.06);
+width:420px;
 
-    border-color:#39D5FF;
+height:420px;
 
-    box-shadow:
-    0 15px 40px rgba(0,0,0,.35),
-    0 0 35px rgba(0,200,255,.20);
+left:-180px;
 
-}
-
-.tech-card i{
-
-font-size:42px;
-
-color:#00C8FF;
-
-margin-bottom:25px;
-
-display:block;
+top:-120px;
 
 }
 
-.tech-card h3{
+.gradient-two{
 
-margin-bottom:18px;
+width:380px;
+
+height:380px;
+
+right:-180px;
+
+bottom:-140px;
 
 }
-/* ==========================================
-   MOBILE - HIDE NAVBAR
-========================================== */
 
-nav{
+.city{
 
 display:none;
 
 }
 
-.hero{
+/* Buttons */
 
-padding-top:60px;
+.hero-buttons{
 
-}
-/* ==========================================
-   CARD CURSOR GLOW
-========================================== */
+flex-direction:column;
 
-.feature-card,
-.timeline-card,
-.tech-card,
-.vision-card,
-.glass-card{
+align-items:center;
 
-    position:relative;
+gap:16px;
 
-    overflow:hidden;
+margin-bottom:40px;
 
 }
 
-.feature-card::before,
-.timeline-card::before,
-.tech-card::before,
-.vision-card::before,
-.glass-card::before{
+.primary-button,
+.secondary-button{
 
-    content:"";
+width:100%;
+max-width:320px;
 
-    position:absolute;
-
-    width:180px;
-
-    height:180px;
-
-    border-radius:50%;
-
-    background:radial-gradient(
-        circle,
-        rgba(0,200,255,.10),
-        transparent 70%
-    );
-
-    left:var(--mouse-x,-999px);
-
-    top:var(--mouse-y,-999px);
-
-    transform:translate(-50%,-50%);
-
-    opacity:0;
-
-    transition:opacity .25s ease;
-
-    pointer-events:none;
+justify-content:center;
 
 }
 
-.feature-card:hover::before,
-.timeline-card:hover::before,
-.tech-card:hover::before,
-.vision-card:hover::before,
-.glass-card:hover::before{
+/* Hero Stats */
 
-    opacity:1;
+.hero-stats{
+
+grid-template-columns:1fr;
+
+gap:20px;
 
 }
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
+.hero-stats div{
 
-<meta charset="UTF-8">
+padding:28px;
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+}
 
-<title>NanoConstruct AI | Building Tomorrow, Atom by Atom</title>
+/* Story */
 
-<meta name="description" content="NanoConstruct AI is building the future of construction using Artificial Intelligence, autonomous robotics and advanced materials.">
+.story-grid{
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+grid-template-columns:1fr;
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+gap:25px;
 
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+}
 
-<link rel="stylesheet" href="style.css">
+/* Timeline */
 
-<link
-rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-/>
+.timeline{
 
-</head>
+grid-template-columns:1fr;
 
-<body>
+gap:25px;
 
-<div id="particles"></div>
+}
 
-<div class="grid-overlay"></div>
+.timeline-line{
 
-<div class="mouse-glow"></div>
+display:none;
 
-<!-- ========================= -->
+}
 
-<!-- NAVBAR -->
+/* Features */
 
-<!-- ========================= -->
+.feature-grid{
 
-<nav>
+grid-template-columns:1fr;
 
-<div class="logo">
+gap:25px;
 
-<div class="logo-circle">
+}
 
-<img src="assets/logo.png" alt="NanoConstruct AI Logo">
+/* Technology */
 
-</div>
+.tech-grid{
 
-<span>
+grid-template-columns:1fr;
 
-NanoConstruct AI
+gap:25px;
 
-</span>
+}
 
-</div>
+/* Vision */
 
-<ul>
+.vision-grid{
 
-<li><a href="#story">Story</a></li>
+grid-template-columns:1fr;
 
-<li><a href="#works">Technology</a></li>
+gap:25px;
 
-<li><a href="#vision">Vision</a></li>
+}
 
-<li><a href="#waitlist">Waitlist</a></li>
+/* Stats */
 
-</ul>
+.stats{
 
-<a href="#waitlist" class="nav-button">
+grid-template-columns:1fr;
 
-Join Waitlist
+gap:25px;
 
-</a>
+}
 
-</nav>
+/* Waitlist */
 
-<!-- ========================= -->
+.waitlist-card{
 
-<!-- HERO -->
+padding:35px 22px;
 
-<!-- ========================= -->
+}
 
-<section class="hero">
+.waitlist form{
 
-<div class="hero-background">
+flex-direction:column;
 
-<div class="earth"></div>
-    
-<div class="city"></div>
+}
 
-<div class="blueprint"></div>
+.waitlist input{
 
-<div class="gradient-one"></div>
+width:100%;
 
-<div class="gradient-two"></div>
+min-width:0;
 
-</div>
+}
 
-<div class="hero-content">
+.waitlist button{
 
-<p class="mini-title">
+width:100%;
 
-THE FUTURE OF CONSTRUCTION
+}
 
-</p>
+/* Contact */
 
-<h1>
-    Building Tomorrow,
+.socials{
 
-    <span class="hero-gradient">
-        Atom <span class="by">by</span> Atom
-    </span>
-</h1>
+gap:18px;
 
-<p class="hero-description">
+flex-wrap:wrap;
 
-NanoConstruct AI is redefining construction through Artificial Intelligence,
-autonomous robotics and advanced materials—making homes faster, safer,
-smarter and more sustainable than ever before.
+}
 
-</p>
+/* Footer */
 
-<div class="hero-buttons">
+.footer-logo{
 
-<a href="#waitlist" class="primary-button">
+flex-direction:column;
 
-Join Waitlist
+gap:16px;
 
-</a>
+}
 
-<a href="#story" class="secondary-button">
+/* Typography */
 
-Learn More
+h1{
 
-</a>
+font-size:3.2rem;
 
-</div>
+}
 
-<div class="hero-stats">
+h2{
 
-<div>
+font-size:2.1rem;
 
-<h2 id="speedCounter" data-target="10" data-suffix="×">0×</h2>
+}
 
-<p>
+h3{
 
-Faster Construction
+font-size:1.35rem;
 
-</p>
+}
 
-</div>
+p{
 
-<div>
+font-size:.98rem;
 
-<h2>
-
-AI
-
-</h2>
-
-<p>
-
-Robot Coordination
-
-</p>
-
-</div>
-
-<div>
-
-<h2>
-
-24/7
-
-</h2>
-
-<p>
-
-Continuous Building
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ========================= -->
-
-<!-- OUR STORY -->
-
-<!-- ========================= -->
-
-<section id="story" class="story">
-
-<div class="section-header">
-
-<p>
-
-WHO WE ARE
-
-</p>
-
-<h2>
-
-Our Story
-
-</h2>
-
-</div>
-
-<div class="story-grid">
-
-<div class="glass-card">
-
-<h3>
-
-Why NanoConstruct AI Exists
-
-</h3>
-
-<p>
-
-Hi, I am <strong>Amogh</strong> a student of Chrysalis High, Bangalore - Grade XI and the student founder of NanoConstruct AI.
-
-NanoConstruct AI began with one simple belief: construction should evolve at the same pace as artificial intelligence. 
-While industries like manufacturing, transportation, and software have embraced automation, construction still depends heavily on traditional methods. 
-Our goal is to combine AI, autonomous robotics, and advanced materials to build safer, faster, and more sustainable homes for the future.
-</p>
-
-</div>
-
-<div class="glass-card">
-
-<h3>
-
-Our Vision
-
-</h3>
-
-<p>
-We envision a future where intelligent construction systems design, coordinate, and build with minimal human intervention.
-By bringing together Artificial Intelligence, robotics, and next-generation materials, NanoConstruct AI aims to make high-quality housing more affordable, more accessible, and dramatically more efficient across the world.
-</p>
-</div>
-
-</div>
-
-</section>
-<!-- ========================= -->
-<!-- HOW IT WORKS -->
-<!-- ========================= -->
-
-<section id="works" class="works">
-
-    <div class="section-header">
-
-        <p>HOW IT WORKS</p>
-
-        <h2>
-            AI Powered Construction
-        </h2>
-
-        <span>
-            From concept to completion in four intelligent stages.
-        </span>
-
-    </div>
-
-    <div class="timeline">
-
-        <div class="timeline-card">
-            <div class="step-number">01</div>
-
-            <div class="timeline-icon">
-
-                <i class="fa-solid fa-compass-drafting"></i>
-
-            </div>
-
-            <h3>
-
-                AI Planning
-
-            </h3>
-
-            <p>
-
-                Customers define their requirements and our AI automatically generates optimized architectural layouts, structural designs and construction schedules.
-
-            </p>
-
-        </div>
-
-        <div class="timeline-line"></div>
-
-        <div class="timeline-card">
-            <div class="step-number">02</div>
-
-            <div class="timeline-icon">
-
-                <i class="fa-solid fa-microchip"></i>
-
-            </div>
-
-            <h3>
-
-                Robot Coordination
-
-            </h3>
-
-            <p>
-
-                NanoConstruct AI intelligently coordinates autonomous construction robots, equipment and logistics in real time.
-
-            </p>
-
-        </div>
-
-        <div class="timeline-line"></div>
-
-        <div class="timeline-card">
-            <div class="step-number">03</div>
-
-            <div class="timeline-icon">
-
-                <i class="fa-solid fa-robot"></i>
-
-            </div>
-
-            <h3>
-
-                Autonomous Building
-
-            </h3>
-
-            <p>
-
-                Construction robots build foundations, walls and structural systems using advanced materials with exceptional precision.
-
-            </p>
-
-        </div>
-
-        <div class="timeline-line"></div>
-
-        <div class="timeline-card">
-            <div class="step-number">04</div>
-
-            <div class="timeline-icon">
-
-                <i class="fa-solid fa-shield-halved"></i>
-
-            </div>
-
-            <h3>
-
-                AI Monitoring
-
-            </h3>
-
-            <p>
-
-                Artificial Intelligence continuously monitors quality, safety, efficiency and project progress until completion.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ========================= -->
-<!-- WHY NANOCONSTRUCT AI -->
-<!-- ========================= -->
-
-<section class="features">
-
-    <div class="section-header">
-
-        <p>
-
-            WHY US
-
-        </p>
-
-        <h2>
-
-            Why NanoConstruct AI?
-
-        </h2>
-
-        <span>
-
-            Engineering the next generation of intelligent construction.
-
-        </span>
-
-    </div>
-
-    <div class="feature-grid">
-
-        <div class="feature-card">
-
-            <div class="feature-icon">
-
-                <i class="fa-solid fa-brain"></i>
-
-            </div>
-
-        <h3>AI-Driven Decision Making</h3>
-
-            <p>
-
-               Artificial Intelligence continuously optimizes planning, scheduling and execution by analyzing project data in real time.
-
-            </p>
-
-        </div>
-
-        <div class="feature-card">
-
-            <div class="feature-icon">
-
-                <i class="fa-solid fa-robot"></i>
-
-            </div>
-
-        <h3>Autonomous Robotics</h3>
-
-            <p>
-
-               Construction robots work together as an intelligent fleet, improving precision while reducing manual labour requirements.
-
-            </p>
-
-        </div>
-
-        <div class="feature-card">
-
-            <div class="feature-icon">
-
-                <i class="fa-solid fa-cubes"></i>
-
-            </div>
-
-         <h3>Next-Generation Materials</h3>
-
-            <p>
-
-               Advanced materials improve structural strength, reduce waste and enable faster, more sustainable construction.
-            </p>
-
-        </div>
-
-        <div class="feature-card">
-
-            <div class="feature-icon">
-
-                <i class="fa-solid fa-bolt"></i>
-
-            </div>
-
-     <h3>10× Faster Project Delivery</h3>
-
-            <p>
-
-               Automation dramatically shortens construction timelines while maintaining consistent quality and safety standards.
-
-            </p>
-
-        </div>
-
-        <div class="feature-card">
-
-            <div class="feature-icon">
-
-                <i class="fa-solid fa-earth-americas"></i>
-
-            </div>
-
-         <h3>Built for Sustainability</h3>
-
-            <p>
-
-                Lower waste, optimize material usage and reduce environmental impact through intelligent automation.
-
-            </p>
-
-        </div>
-
-        <div class="feature-card">
-
-            <div class="feature-icon">
-
-                <i class="fa-solid fa-building"></i>
-
-            </div>
-
-           <h3>Continuous Site Intelligence</h3>
-
-            <p>
-
-                Every building becomes digitally connected, continuously monitored and future-ready.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ========================= -->
-<!-- TECHNOLOGY -->
-<!-- ========================= -->
-
-<section class="technology">
-
-    <div class="section-header">
-
-        <p>
-
-            TECHNOLOGY
-
-        </p>
-
-        <h2>
-
-            Our Technology Stack
-
-        </h2>
-
-    </div>
-
-    <div class="tech-grid">
-
-        <div class="tech-card">
-
-            <i class="fa-solid fa-brain"></i>
-
-            <h3>
-
-                Artificial Intelligence
-
-            </h3>
-
-            <p>
-
-                Decision making, optimization and predictive construction planning.
-
-            </p>
-
-        </div>
-
-        <div class="tech-card">
-
-            <i class="fa-solid fa-robot"></i>
-
-            <h3>
-
-                Autonomous Robotics
-
-            </h3>
-
-            <p>
-
-                Intelligent construction robots working collaboratively on-site.
-
-            </p>
-
-        </div>
-
-        <div class="tech-card">
-
-            <i class="fa-solid fa-network-wired"></i>
-
-            <h3>
-
-                Digital Twin
-
-            </h3>
-
-            <p>
-
-                Live simulation and monitoring of every construction project.
-
-            </p>
-
-        </div>
-
-        <div class="tech-card">
-
-            <i class="fa-solid fa-atom"></i>
-
-            <h3>
-
-                Advanced Materials
-
-            </h3>
-
-            <p>
-
-                Stronger, smarter and more sustainable building materials.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-<!-- ========================================= -->
-<!-- FUTURE VISION -->
-<!-- ========================================= -->
-
-<section id="vision" class="vision">
-
-    <div class="vision-bg"></div>
-
-    <div class="section-header">
-
-        <p>THE FUTURE</p>
-
-        <h2>Reimagining How Humanity Builds</h2>
-
-        <span>
-            A future where Artificial Intelligence, Robotics and Advanced Materials
-            work together to build smarter cities and better communities.
-        </span>
-
-    </div>
-
-    <div class="vision-grid">
-
-        <div class="vision-card">
-
-            <i class="fa-solid fa-earth-americas"></i>
-
-            <h3>Global Infrastructure</h3>
-
-            <p>
-                Building intelligent cities and sustainable communities around the world.
-            </p>
-
-        </div>
-
-        <div class="vision-card">
-
-            <i class="fa-solid fa-city"></i>
-
-            <h3>Smart Cities</h3>
-
-            <p>
-                Connected infrastructure powered by AI-driven planning and digital twins.
-            </p>
-
-        </div>
-
-        <div class="vision-card">
-
-            <i class="fa-solid fa-satellite"></i>
-
-            <h3>Real-Time Monitoring</h3>
-
-            <p>
-                Continuous monitoring of every construction project through AI and cloud technology.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ========================================= -->
-<!-- STATS -->
-<!-- ========================================= -->
-
-<section class="stats">
-
-    <div class="stat-box">
-
-      <h2 data-target="50" data-suffix="%">0%</h2>
-
-        <p>Faster Construction</p>
-
-    </div>
-
-    <div class="stat-box">
-
-       <h2 data-target="70" data-suffix="%">0%</h2>
-
-        <p>Less Manual Labour</p>
-
-    </div>
-
-    <div class="stat-box">
-
-      <h2 data-target="40" data-suffix="%">0%</h2>
-
-        <p>Reduced Material Waste</p>
-
-    </div>
-
-    <div class="stat-box">
-
-  <h2 data-target="95" data-suffix="%">0%</h2>
-
-        <p>AI Accuracy</p>
-
-    </div>
-
-</section>
-
-<!-- ========================================= -->
-<!-- WAITLIST -->
-<!-- ========================================= -->
-
-<section id="waitlist" class="waitlist">
-
-    <div class="waitlist-card">
-
-        <p>COMING SOON</p>
-
-        <h2>
-
-            Join The Future of Construction
-
-        </h2>
-
-        <span>
-
-            Be among the first to experience autonomous AI-powered construction.
-
-        </span>
-
-        <form id="waitlistForm">
-
-            <input
-                type="email"
-                placeholder="Enter your email"
-                required
-            >
-
-            <button type="submit">
-
-                Join Waitlist
-
-            </button>
-
-        </form>
-
-        <div id="successMessage">
-
-            Thank you! You're now on the NanoConstruct AI waitlist.
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ========================================= -->
-<!-- CONTACT -->
-<!-- ========================================= -->
-
-<section class="contact">
-
-    <div class="section-header">
-
-        <p>CONTACT</p>
-
-        <h2>Let's Build Tomorrow Together</h2>
-
-    </div>
-
-    <div class="contact-links">
-
-        <a href="mailto:nanocontructai.26@gmail.com">
-
-            <i class="fa-solid fa-envelope"></i>
-
-            nanocontructai.26@gmail.com
-
-        </a>
-
-    </div>
-
-    <div class="socials">
-
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-
-        <a href="#"><i class="fab fa-instagram"></i></a>
-
-        <a href="#"><i class="fab fa-x-twitter"></i></a>
-
-        <a href="#"><i class="fab fa-github"></i></a>
-
-    </div>
-
-</section>
-
-<!-- ========================================= -->
-<!-- FOOTER -->
-<!-- ========================================= -->
-
-<footer>
-
-    <div class="footer-logo">
-
-        <img src="assets/logo.png" alt="NanoConstruct AI Logo">
-
-        <span>NanoConstruct AI</span>
-
-    </div>
-
-    <p>Building Tomorrow, Atom by Atom</p>
-
-    <small>
-        © 2026 NanoConstruct AI. All Rights Reserved.
-    </small>
-
-</footer>
-
-<script src="script.js"></script>
-
-</body>
-</html>
-@media (max-width:768px){
-
-nav{
-    display:none !important;
 }
 
 }
+
 
