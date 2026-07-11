@@ -2981,4 +2981,11 @@ By bringing together Artificial Intelligence, robotics, and next-generation mate
 
 </body>
 </html>
+@media (max-width:768px){
+
+nav{
+    display:none !important;
+}
+
+}
 
