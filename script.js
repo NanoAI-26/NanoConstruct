@@ -3,15 +3,22 @@
    PREMIUM WEBSITE INTERACTIONS
 ========================================= */
 
-/* Mouse Glow */
+/* =========================================
+   MOUSE GLOW
+========================================= */
 
 const glow = document.querySelector(".mouse-glow");
 
-document.addEventListener("mousemove", (e) => {
-    glow.style.left = e.clientX + "px";
-    glow.style.top = e.clientY + "px";
-});
+if (glow) {
 
+    document.addEventListener("mousemove", (e) => {
+
+        glow.style.left = `${e.clientX}px`;
+        glow.style.top = `${e.clientY}px`;
+
+    });
+
+}
 
 /* =========================================
    Navbar Scroll Effect
