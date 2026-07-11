@@ -1132,6 +1132,39 @@ z-index:-1;
 opacity:.4;
 
 }
+/* ==========================================
+   TIMELINE STEP NUMBERS
+========================================== */
+
+.step-number{
+
+    position:absolute;
+
+    top:20px;
+
+    right:22px;
+
+    font-size:.9rem;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    color:rgba(0,200,255,.35);
+
+    transition:.35s ease;
+
+    user-select:none;
+
+}
+
+.timeline-card:hover .step-number{
+
+    color:#39D5FF;
+
+    transform:scale(1.15);
+
+}
 
 /* ========================================= */
 /* FEATURES */
