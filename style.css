@@ -693,6 +693,37 @@ background:linear-gradient(90deg,#00C8FF,#5DE2FF,#ffffff);
 -webkit-text-fill-color:transparent;
 
 }
+/* ==========================================
+   HERO "BY" STYLING
+========================================== */
+
+.hero-gradient{
+
+display:block;
+
+}
+
+.hero-gradient .by{
+
+display:inline-block;
+
+margin:0 18px;
+
+font-size:.58em;
+
+font-weight:500;
+
+letter-spacing:2px;
+
+opacity:.75;
+
+vertical-align:middle;
+
+color:#8FDFFF;
+
+-webkit-text-fill-color:#8FDFFF;
+
+}
 
 .hero-description{
 
