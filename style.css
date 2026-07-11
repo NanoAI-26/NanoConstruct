@@ -1218,6 +1218,16 @@ background:linear-gradient(
 #00C8FF,
 #5DE2FF
 );
+
+color:#081423;
+
+font-size:28px;
+
+margin-bottom:25px;
+
+box-shadow:0 0 30px rgba(0,200,255,.3);
+
+}
 /* ========================================= */
 /* FUTURE VISION */
 /* ========================================= */
@@ -1778,13 +1788,7 @@ transform:scale(1.1);
 }
 
 }
-color:#081423;
 
-font-size:28px;
-
-margin-bottom:25px;
-
-box-shadow:0 0 30px rgba(0,200,255,.3);
 
 }
 
