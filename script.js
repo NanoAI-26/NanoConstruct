@@ -560,3 +560,50 @@ glowCards.forEach(card=>{
 });
 
 });
+/* ==========================================
+   HERO STATS COUNTER
+========================================== */
+
+const speedCounter = document.getElementById("speedCounter");
+
+let speedAnimated = false;
+
+const speedObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting && !speedAnimated) {
+
+            speedAnimated = true;
+
+            let count = 0;
+
+            const interval = setInterval(() => {
+
+                count++;
+
+                speedCounter.innerText = count + "×";
+
+                if (count >= 10) {
+
+                    clearInterval(interval);
+
+                }
+
+            }, 100);
+
+        }
+
+    });
+
+}, {
+
+    threshold: 0.6
+
+});
+
+if(speedCounter){
+
+    speedObserver.observe(speedCounter);
+
+}
