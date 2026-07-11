@@ -97,18 +97,19 @@ const elements=document.querySelectorAll(
 
 );
 
-elements.forEach(el=>{
+elements.forEach((el,index)=>{
 
-el.style.opacity="0";
+    el.style.opacity="0";
 
-el.style.transform="translateY(60px)";
+    el.style.transform="translateY(40px)";
 
-el.style.transition="1s";
+    el.style.transition=
+    `opacity .8s ease ${index*0.08}s,
+     transform .8s ease ${index*0.08}s`;
 
-observer.observe(el);
+    observer.observe(el);
 
 });
-
 
 
 
