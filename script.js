@@ -28,7 +28,7 @@ const navbar = document.querySelector("nav");
 
 window.addEventListener("scroll", () => {
 
-    if(window.scrollY > 60){
+    if(window.scrollY > 90){
 
         navbar.style.background = "rgba(8,18,35,.82)";
         navbar.style.backdropFilter = "blur(28px)";
