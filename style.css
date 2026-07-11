@@ -312,11 +312,14 @@ transition:.35s;
 
 .primary-button:hover{
 
-transform:translateY(-4px);
+transform:translateY(-5px) scale(1.03);
+
+filter:brightness(1.08);
 
 box-shadow:
-
-0 0 60px rgba(0,200,255,.55);
+0 0 35px rgba(0,200,255,.45),
+0 12px 35px rgba(0,0,0,.35),
+0 0 90px rgba(0,200,255,.25);
 
 }
 
@@ -342,12 +345,16 @@ transition:.35s;
 
 .secondary-button:hover{
 
+transform:translateY(-5px);
+
 background:rgba(255,255,255,.08);
 
-border-color:var(--primary);
+border-color:#39D5FF;
+
+box-shadow:
+0 0 30px rgba(0,200,255,.18);
 
 }
-
 /* ========================================= */
 /* TEXT */
 /* ========================================= */
