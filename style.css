@@ -1920,15 +1920,15 @@ nav.nav-scrolled{
 
     position:absolute;
 
-    width:260px;
+    width:180px;
 
-    height:260px;
+    height:180px;
 
     border-radius:50%;
 
     background:radial-gradient(
         circle,
-        rgba(0,200,255,.18),
+        rgba(0,200,255,.10),
         transparent 70%
     );
 
