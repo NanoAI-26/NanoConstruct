@@ -1144,13 +1144,13 @@ opacity:.4;
 
     right:22px;
 
-    font-size:.9rem;
+    font-size:1.5rem;
 
     font-weight:700;
 
     letter-spacing:2px;
 
-    color:rgba(0,200,255,.35);
+    color:rgba(255,255,255,.12);
 
     transition:.35s ease;
 
@@ -1162,10 +1162,7 @@ opacity:.4;
 
     color:#39D5FF;
 
-    transform:scale(1.15);
-
 }
-
 /* ========================================= */
 /* FEATURES */
 /* ========================================= */
